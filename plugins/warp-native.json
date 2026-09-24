@@ -35,5 +35,6 @@
   "source": "/baza/skripty/warp-psiphon/",
   "ref": "41c59e2a724f347cbe7d3dd6c1ea38e692e034ad",
   "needs_root": true,
-  "fetches_latest": true
+  "fetches_latest": true,
+  "featured": true
 }

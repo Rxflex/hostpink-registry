@@ -1,6 +1,6 @@
 {
   "id": "remnawave-scripts",
-  "title": "Remnawave Scripts (DigneZzZ)",
+  "title": "Remnawave Scripts",
   "author": "DigneZzZ",
   "repo": "DigneZzZ/remnawave-scripts",
   "category": "Установщики",
@@ -45,5 +45,6 @@
   "source": "/baza/skripty/ustanovschiki/",
   "ref": "e18fae58f6f98727c682af023f2269fd434324a1",
   "needs_root": true,
-  "fetches_latest": true
+  "fetches_latest": true,
+  "featured": true
 }

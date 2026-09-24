@@ -30,5 +30,6 @@
   "source": "/baza/hosting/testy-vps/",
   "ref": "316260707a0db8ccd83d7f5ac9d643f21396b44c",
   "needs_root": false,
-  "fetches_latest": true
+  "fetches_latest": true,
+  "featured": true
 }

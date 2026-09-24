@@ -30,5 +30,6 @@
   "source": "/baza/skripty/reshala-zaschita/",
   "ref": "079365e65abd50f752ecf0a16eb3a063142f42b5",
   "needs_root": true,
-  "fetches_latest": true
+  "fetches_latest": true,
+  "featured": true
 }

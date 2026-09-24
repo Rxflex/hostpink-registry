@@ -30,7 +30,8 @@
    "source": "/baza/skripty/chekery/",
    "ref": "42a688b855b37bc6e97eace1897df38897b8d9fe",
    "needs_root": false,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   },
   {
    "id": "ipregion",
@@ -118,11 +119,12 @@
    "source": "/baza/skripty/chekery/",
    "ref": "3d26c9704686a3919db67a29aaf3a2497f7ad4d4",
    "needs_root": false,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   },
   {
    "id": "remnawave-backup-restore",
-   "title": "Бэкап и восстановление Remnawave",
+   "title": "Бэкап Remnawave",
    "author": "distillium",
    "repo": "distillium/remnawave-backup-restore",
    "category": "Бэкапы",
@@ -151,7 +153,7 @@
   },
   {
    "id": "remnawave-reverse-proxy",
-   "title": "Remnawave Reverse Proxy (eGames)",
+   "title": "Remnawave Reverse Proxy",
    "author": "eGamesAPI",
    "repo": "eGamesAPI/remnawave-reverse-proxy",
    "category": "Установщики",
@@ -180,7 +182,7 @@
   },
   {
    "id": "remnawave-scripts",
-   "title": "Remnawave Scripts (DigneZzZ)",
+   "title": "Remnawave Scripts",
    "author": "DigneZzZ",
    "repo": "DigneZzZ/remnawave-scripts",
    "category": "Установщики",
@@ -225,7 +227,8 @@
    "source": "/baza/skripty/ustanovschiki/",
    "ref": "e18fae58f6f98727c682af023f2269fd434324a1",
    "needs_root": true,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   },
   {
    "id": "reshala",
@@ -259,11 +262,12 @@
    "source": "/baza/skripty/reshala-zaschita/",
    "ref": "079365e65abd50f752ecf0a16eb3a063142f42b5",
    "needs_root": true,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   },
   {
    "id": "russian-iperf3",
-   "title": "Скорость до России (iperf3)",
+   "title": "Скорость до РФ (iperf3)",
    "author": "itdoginfo",
    "repo": "itdoginfo/russian-iperf3-servers",
    "category": "Проверки",
@@ -356,7 +360,8 @@
    "source": "/baza/skripty/warp-psiphon/",
    "ref": "41c59e2a724f347cbe7d3dd6c1ea38e692e034ad",
    "needs_root": true,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   },
   {
    "id": "yabs",
@@ -390,7 +395,8 @@
    "source": "/baza/hosting/testy-vps/",
    "ref": "316260707a0db8ccd83d7f5ac9d643f21396b44c",
    "needs_root": false,
-   "fetches_latest": true
+   "fetches_latest": true,
+   "featured": true
   }
  ]
 }

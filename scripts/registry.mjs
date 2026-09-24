@@ -24,7 +24,7 @@ const CHECK = process.argv.includes("--check");
 const ID = /^[a-z0-9][a-z0-9-]{0,40}$/;
 const SHA = /^[0-9a-f]{40}$/;
 const PLATFORMS = new Set(["linux", "darwin", "windows", "freebsd"]);
-const FIELDS = ["id", "title", "author", "repo", "ref", "category", "description", "platforms", "needs_root", "fetches_latest", "files", "actions", "source"];
+const FIELDS = ["id", "title", "author", "repo", "ref", "category", "description", "platforms", "needs_root", "fetches_latest", "files", "actions", "source", "featured"];
 
 async function gh(path) {
   const headers = { "user-agent": "hostpink-registry", accept: "application/vnd.github+json" };
@@ -69,6 +69,7 @@ function check(p, file) {
     if (!f.path || f.path.includes("..") || f.path.startsWith("/")) err(`плохой путь ${f.path}`);
     if (!/^[0-9a-f]{64}$/.test(f.sha256 ?? "")) err(`нет sha256 у ${f.path}: запусти --pin`);
   }
+  if (p.featured !== undefined && typeof p.featured !== "boolean") err("featured: true или false");
   if (!p.actions?.length) err("нет actions");
   const ids = new Set();
   for (const a of p.actions) {

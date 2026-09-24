@@ -25,5 +25,6 @@
   "source": "/baza/skripty/chekery/",
   "ref": "3d26c9704686a3919db67a29aaf3a2497f7ad4d4",
   "needs_root": false,
-  "fetches_latest": true
+  "fetches_latest": true,
+  "featured": true
 }
