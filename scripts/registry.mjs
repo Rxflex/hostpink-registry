@@ -10,7 +10,7 @@
 //
 // Copyright (c) 2026 Rxflex (https://host.pink). PolyForm Noncommercial License 1.0.0.
 import { createHash } from "node:crypto";
-import { readdirSync, readFileSync, writeFileSync } from "node:fs";
+import { existsSync, readdirSync, readFileSync, writeFileSync } from "node:fs";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
@@ -92,7 +92,26 @@ for (const file of readdirSync(DIR).filter((f) => f.endsWith(".json")).sort()) {
   list.push(p);
 }
 
-if (!CHECK) {
-  writeFileSync(OUT, JSON.stringify({ version: 1, name: "host.pink", plugins: list }, null, 1) + "\n");
+// Реестры, на которые ссылается этот. Клиенты обходят их сами (до трёх уровней вложенности),
+// поэтому чужой реестр подключается без пересборки hostpink и без деплоя сайта.
+const REGS = join(ROOT, "registries.json");
+const registries = existsSync(REGS) ? JSON.parse(readFileSync(REGS, "utf8")) : [];
+const regIds = new Set();
+for (const r of registries) {
+  const err = (m) => { throw new Error(`registries.json, ${r.id ?? "?"}: ${m}`); };
+  for (const k of Object.keys(r)) if (!["id", "name", "repo", "url", "description"].includes(k)) err(`лишнее поле ${k}`);
+  if (!ID.test(r.id ?? "")) err("id: только a-z, 0-9 и дефис");
+  if (regIds.has(r.id)) err("повтор id");
+  regIds.add(r.id);
+  if (!r.name) err("нет name");
+  if (!!r.repo === !!r.url) err("нужен ровно один из repo (owner/name) или url (https://…json)");
+  if (r.repo && !/^[\w.-]+\/[\w.-]+$/.test(r.repo)) err("repo вида owner/name");
+  if (r.url && !/^https:\/\/\S+\.json$/.test(r.url)) err("url: https и .json");
 }
-console.log(`registry: ${list.length} плагинов${CHECK ? ", всё в порядке" : ` → ${OUT}`}`);
+
+if (!CHECK) {
+  const out = { version: 1, name: "host.pink", plugins: list };
+  if (registries.length) out.registries = registries;
+  writeFileSync(OUT, JSON.stringify(out, null, 1) + "\n");
+}
+console.log(`registry: ${list.length} плагинов, ${registries.length} реестров по ссылке${CHECK ? ", всё в порядке" : ` → ${OUT}`}`);
