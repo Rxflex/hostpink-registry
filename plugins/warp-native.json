@@ -1,0 +1,39 @@
+{
+  "id": "warp-native",
+  "title": "WARP Native",
+  "author": "distillium",
+  "repo": "distillium/warp-native",
+  "category": "Сеть",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Cloudflare WARP в нативном режиме через WireGuard-интерфейс, без лишнего софта. Обычно его ставят как outbound для ноды.",
+  "files": [
+    {
+      "path": "install.sh",
+      "sha256": "eb5cacdd9752c74b34b58d853b8bdf95c7d11be60b8fdc6bb7ace7b3cd5ec963",
+      "size": 37016
+    },
+    {
+      "path": "uninstall.sh",
+      "sha256": "3423a714e736fe9168798b67afb168f17b2ab59e4c49d57283e77bd15f75d85c",
+      "size": 3597
+    }
+  ],
+  "actions": [
+    {
+      "id": "install",
+      "title": "Установить WARP",
+      "run": "bash install.sh"
+    },
+    {
+      "id": "uninstall",
+      "title": "Удалить WARP",
+      "run": "bash uninstall.sh"
+    }
+  ],
+  "source": "/baza/skripty/warp-psiphon/",
+  "ref": "41c59e2a724f347cbe7d3dd6c1ea38e692e034ad",
+  "needs_root": true,
+  "fetches_latest": true
+}

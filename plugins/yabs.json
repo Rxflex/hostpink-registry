@@ -1,0 +1,34 @@
+{
+  "id": "yabs",
+  "title": "YABS",
+  "author": "masonr",
+  "repo": "masonr/yet-another-bench-script",
+  "category": "Проверки",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Классический бенчмарк нового VPS: диск через fio, сеть через iperf3, процессор через Geekbench.",
+  "files": [
+    {
+      "path": "yabs.sh",
+      "sha256": "54d23e3b17d36d1f4e40895c6a9929601e664ff1cf1a9217b034a60076ac504f",
+      "size": 52225
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Полный тест",
+      "run": "bash yabs.sh"
+    },
+    {
+      "id": "fast",
+      "title": "Без Geekbench (быстрее)",
+      "run": "bash yabs.sh -g"
+    }
+  ],
+  "source": "/baza/hosting/testy-vps/",
+  "ref": "316260707a0db8ccd83d7f5ac9d643f21396b44c",
+  "needs_root": false,
+  "fetches_latest": true
+}

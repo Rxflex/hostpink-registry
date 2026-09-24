@@ -1,0 +1,29 @@
+{
+  "id": "russian-iperf3",
+  "title": "Скорость до России (iperf3)",
+  "author": "itdoginfo",
+  "repo": "itdoginfo/russian-iperf3-servers",
+  "category": "Проверки",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Замеряет скорость от сервера до публичных iperf3-серверов в России. Показывает реальный канал до российских пользователей.",
+  "files": [
+    {
+      "path": "speedtest.sh",
+      "sha256": "068d37703beab0ec7e44a24ed45f6e911af51511ea6476a85add7250fab3d3dc",
+      "size": 8800
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Замерить скорость",
+      "run": "bash speedtest.sh"
+    }
+  ],
+  "source": "/baza/hosting/testy-vps/",
+  "ref": "dd906820f9b9b679cb68febee7f3218634c4a7fc",
+  "needs_root": false,
+  "fetches_latest": false
+}

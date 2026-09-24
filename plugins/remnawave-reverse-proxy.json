@@ -1,0 +1,29 @@
+{
+  "id": "remnawave-reverse-proxy",
+  "title": "Remnawave Reverse Proxy (eGames)",
+  "author": "eGamesAPI",
+  "repo": "eGamesAPI/remnawave-reverse-proxy",
+  "category": "Установщики",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Установщик Remnawave за реверс-прокси с сертификатами и маскировкой: панель, нода или всё на одном сервере.",
+  "files": [
+    {
+      "path": "install_remnawave.sh",
+      "sha256": "43099a5d670e7d60505dca89dfcd77d99a6d191994ce5e4bf7d58b1c5242141b",
+      "size": 72111
+    }
+  ],
+  "actions": [
+    {
+      "id": "install",
+      "title": "Запустить установщик",
+      "run": "bash install_remnawave.sh"
+    }
+  ],
+  "source": "/baza/skripty/ustanovschiki/",
+  "ref": "7b29ddbee076c30e85d4e9f7e9bdd30d2120f551",
+  "needs_root": true,
+  "fetches_latest": true
+}

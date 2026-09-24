@@ -1,0 +1,30 @@
+{
+  "id": "censorcheck",
+  "title": "censorcheck",
+  "author": "vernette",
+  "repo": "vernette/censorcheck",
+  "category": "Проверки",
+  "platforms": [
+    "linux",
+    "darwin"
+  ],
+  "description": "Проверяет, какие сайты открываются с сервера под DPI-цензурой и геоблоками. Показывает, что режется и как.",
+  "files": [
+    {
+      "path": "censorcheck.sh",
+      "sha256": "e8e2d3a364d1e92087e1571f8bf5bad529884c79375c9002916f40be5855b9b8",
+      "size": 30779
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Проверить доступность сайтов",
+      "run": "bash censorcheck.sh"
+    }
+  ],
+  "source": "/baza/skripty/chekery/",
+  "ref": "42a688b855b37bc6e97eace1897df38897b8d9fe",
+  "needs_root": false,
+  "fetches_latest": true
+}

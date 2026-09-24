@@ -1,0 +1,396 @@
+{
+ "version": 1,
+ "name": "host.pink",
+ "plugins": [
+  {
+   "id": "censorcheck",
+   "title": "censorcheck",
+   "author": "vernette",
+   "repo": "vernette/censorcheck",
+   "category": "Проверки",
+   "platforms": [
+    "linux",
+    "darwin"
+   ],
+   "description": "Проверяет, какие сайты открываются с сервера под DPI-цензурой и геоблоками. Показывает, что режется и как.",
+   "files": [
+    {
+     "path": "censorcheck.sh",
+     "sha256": "e8e2d3a364d1e92087e1571f8bf5bad529884c79375c9002916f40be5855b9b8",
+     "size": 30779
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Проверить доступность сайтов",
+     "run": "bash censorcheck.sh"
+    }
+   ],
+   "source": "/baza/skripty/chekery/",
+   "ref": "42a688b855b37bc6e97eace1897df38897b8d9fe",
+   "needs_root": false,
+   "fetches_latest": true
+  },
+  {
+   "id": "ipregion",
+   "title": "ipregion",
+   "author": "vernette",
+   "repo": "vernette/ipregion",
+   "category": "Проверки",
+   "platforms": [
+    "linux",
+    "darwin"
+   ],
+   "description": "Спрашивает десятки GeoIP-баз, стримингов и CDN, из какой страны они видят IP сервера.",
+   "files": [
+    {
+     "path": "ipregion.sh",
+     "sha256": "f80281f79012def06cc6a7744eb78d1a4e9d9ba90b336ae01c304bea66920cd8",
+     "size": 50186
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Проверить страну IP",
+     "run": "bash ipregion.sh"
+    }
+   ],
+   "source": "/baza/skripty/chekery/",
+   "ref": "d6c230cc1fd5042931590730a5651ef87e985236",
+   "needs_root": false,
+   "fetches_latest": false
+  },
+  {
+   "id": "multitest",
+   "title": "multitest",
+   "author": "saveksme",
+   "repo": "saveksme/multitest",
+   "category": "Проверки",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Интерактивная диагностика и бенчмарк сервера: несколько популярных тестов в одном меню.",
+   "files": [
+    {
+     "path": "multitest.sh",
+     "sha256": "41ff5d5766426ecd37cf8523fbafa69dc386f81c83acbdde4565ea0ad3c8a6f4",
+     "size": 231359
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Открыть меню тестов",
+     "run": "bash multitest.sh"
+    }
+   ],
+   "source": "/baza/hosting/testy-vps/",
+   "ref": "e000e612bc6c2cf6671def0ea3d52cd721bb7caf",
+   "needs_root": false,
+   "fetches_latest": true
+  },
+  {
+   "id": "node-diagnostic",
+   "title": "Диагностика ноды",
+   "author": "Case211",
+   "repo": "Case211/node-diagnostic",
+   "category": "Проверки",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Десятки проверок Linux- и VPN-ноды одной командой: сеть, скорость, доступность YouTube и популярных сервисов.",
+   "files": [
+    {
+     "path": "node-diagnostic.sh",
+     "sha256": "53b8b29eab7bbed1f96789d3dcd0897fecb978028ddec912e72daed7ac16c20e",
+     "size": 13601
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Запустить диагностику",
+     "run": "bash node-diagnostic.sh"
+    }
+   ],
+   "source": "/baza/skripty/chekery/",
+   "ref": "3d26c9704686a3919db67a29aaf3a2497f7ad4d4",
+   "needs_root": false,
+   "fetches_latest": true
+  },
+  {
+   "id": "remnawave-backup-restore",
+   "title": "Бэкап и восстановление Remnawave",
+   "author": "distillium",
+   "repo": "distillium/remnawave-backup-restore",
+   "category": "Бэкапы",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Резервное копирование каталога и базы Remnawave с отправкой в Telegram и восстановление из бэкапа.",
+   "files": [
+    {
+     "path": "backup-restore.sh",
+     "sha256": "91470909131ef66f5e6a022069dd419eb1f2fc8437bc7ec5655ba2df50e5f8ca",
+     "size": 150762
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Открыть меню бэкапов",
+     "run": "bash backup-restore.sh"
+    }
+   ],
+   "source": "/baza/set/bekapy/",
+   "ref": "02323bd7554dfa9f4cb605a11c6a9b625ec11d85",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "remnawave-reverse-proxy",
+   "title": "Remnawave Reverse Proxy (eGames)",
+   "author": "eGamesAPI",
+   "repo": "eGamesAPI/remnawave-reverse-proxy",
+   "category": "Установщики",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Установщик Remnawave за реверс-прокси с сертификатами и маскировкой: панель, нода или всё на одном сервере.",
+   "files": [
+    {
+     "path": "install_remnawave.sh",
+     "sha256": "43099a5d670e7d60505dca89dfcd77d99a6d191994ce5e4bf7d58b1c5242141b",
+     "size": 72111
+    }
+   ],
+   "actions": [
+    {
+     "id": "install",
+     "title": "Запустить установщик",
+     "run": "bash install_remnawave.sh"
+    }
+   ],
+   "source": "/baza/skripty/ustanovschiki/",
+   "ref": "7b29ddbee076c30e85d4e9f7e9bdd30d2120f551",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "remnawave-scripts",
+   "title": "Remnawave Scripts (DigneZzZ)",
+   "author": "DigneZzZ",
+   "repo": "DigneZzZ/remnawave-scripts",
+   "category": "Установщики",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Установка и управление панелью Remnawave, нодой и selfsteal-заглушкой одним скриптом, с обновлениями и бэкапами.",
+   "files": [
+    {
+     "path": "remnawave.sh",
+     "sha256": "44ad65ffe28bc1c35e838774e832e730149ea7a3c9ded39dbf97f4267666e0fa",
+     "size": 646184
+    },
+    {
+     "path": "remnanode.sh",
+     "sha256": "bfba0067a1ef2a54e03c979c65d2af8e521e61e5a66585d696ad12490abfc480",
+     "size": 200189
+    },
+    {
+     "path": "selfsteal.sh",
+     "sha256": "2f82a4a73492d8cdb8014aa91c73560929b88a66c23c51af79bfb9a96cdb92b4",
+     "size": 224596
+    }
+   ],
+   "actions": [
+    {
+     "id": "panel",
+     "title": "Панель Remnawave: установка",
+     "run": "bash remnawave.sh @ install"
+    },
+    {
+     "id": "node",
+     "title": "Нода Remnawave: установка",
+     "run": "bash remnanode.sh @ install"
+    },
+    {
+     "id": "selfsteal",
+     "title": "Selfsteal-заглушка: установка",
+     "run": "bash selfsteal.sh @ install"
+    }
+   ],
+   "source": "/baza/skripty/ustanovschiki/",
+   "ref": "e18fae58f6f98727c682af023f2269fd434324a1",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "reshala",
+   "title": "Решала",
+   "author": "DonMatteoVPN",
+   "repo": "DonMatteoVPN/Reshala-Remnawave-Bedolaga",
+   "category": "Защита и тюнинг",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Комбайн обслуживания ноды и панели: оценка сервера, UFW и fail2ban, BBR, eBPF-шейпер, hardening ядра. Ставит команду reshala с меню.",
+   "files": [
+    {
+     "path": "install.sh",
+     "sha256": "c5dacb524ac3549248cb6b636b56ea8a96375320b7acdcd360caa801d9ff9c41",
+     "size": 2825
+    }
+   ],
+   "actions": [
+    {
+     "id": "install",
+     "title": "Установить или обновить Решалу",
+     "run": "bash install.sh"
+    },
+    {
+     "id": "menu",
+     "title": "Открыть меню Решалы (после установки)",
+     "run": "reshala"
+    }
+   ],
+   "source": "/baza/skripty/reshala-zaschita/",
+   "ref": "079365e65abd50f752ecf0a16eb3a063142f42b5",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "russian-iperf3",
+   "title": "Скорость до России (iperf3)",
+   "author": "itdoginfo",
+   "repo": "itdoginfo/russian-iperf3-servers",
+   "category": "Проверки",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Замеряет скорость от сервера до публичных iperf3-серверов в России. Показывает реальный канал до российских пользователей.",
+   "files": [
+    {
+     "path": "speedtest.sh",
+     "sha256": "068d37703beab0ec7e44a24ed45f6e911af51511ea6476a85add7250fab3d3dc",
+     "size": 8800
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Замерить скорость",
+     "run": "bash speedtest.sh"
+    }
+   ],
+   "source": "/baza/hosting/testy-vps/",
+   "ref": "dd906820f9b9b679cb68febee7f3218634c4a7fc",
+   "needs_root": false,
+   "fetches_latest": false
+  },
+  {
+   "id": "traffic-guard",
+   "title": "Traffic Guard",
+   "author": "dotX12",
+   "repo": "dotX12/traffic-guard",
+   "category": "Защита и тюнинг",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Блокировщик сканеров и лишнего трафика со списками подсетей и управлением фаерволом.",
+   "files": [
+    {
+     "path": "install.sh",
+     "sha256": "cce491441289a5dffeb67a73c443265f8836ae42ae06b4beb93a8b033e426395",
+     "size": 7244
+    }
+   ],
+   "actions": [
+    {
+     "id": "install",
+     "title": "Установить Traffic Guard",
+     "run": "bash install.sh"
+    }
+   ],
+   "source": "/baza/skripty/reshala-zaschita/",
+   "ref": "0594f8241a37d20876ebafada6e80ca2fa597900",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "warp-native",
+   "title": "WARP Native",
+   "author": "distillium",
+   "repo": "distillium/warp-native",
+   "category": "Сеть",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Cloudflare WARP в нативном режиме через WireGuard-интерфейс, без лишнего софта. Обычно его ставят как outbound для ноды.",
+   "files": [
+    {
+     "path": "install.sh",
+     "sha256": "eb5cacdd9752c74b34b58d853b8bdf95c7d11be60b8fdc6bb7ace7b3cd5ec963",
+     "size": 37016
+    },
+    {
+     "path": "uninstall.sh",
+     "sha256": "3423a714e736fe9168798b67afb168f17b2ab59e4c49d57283e77bd15f75d85c",
+     "size": 3597
+    }
+   ],
+   "actions": [
+    {
+     "id": "install",
+     "title": "Установить WARP",
+     "run": "bash install.sh"
+    },
+    {
+     "id": "uninstall",
+     "title": "Удалить WARP",
+     "run": "bash uninstall.sh"
+    }
+   ],
+   "source": "/baza/skripty/warp-psiphon/",
+   "ref": "41c59e2a724f347cbe7d3dd6c1ea38e692e034ad",
+   "needs_root": true,
+   "fetches_latest": true
+  },
+  {
+   "id": "yabs",
+   "title": "YABS",
+   "author": "masonr",
+   "repo": "masonr/yet-another-bench-script",
+   "category": "Проверки",
+   "platforms": [
+    "linux"
+   ],
+   "description": "Классический бенчмарк нового VPS: диск через fio, сеть через iperf3, процессор через Geekbench.",
+   "files": [
+    {
+     "path": "yabs.sh",
+     "sha256": "54d23e3b17d36d1f4e40895c6a9929601e664ff1cf1a9217b034a60076ac504f",
+     "size": 52225
+    }
+   ],
+   "actions": [
+    {
+     "id": "run",
+     "title": "Полный тест",
+     "run": "bash yabs.sh"
+    },
+    {
+     "id": "fast",
+     "title": "Без Geekbench (быстрее)",
+     "run": "bash yabs.sh -g"
+    }
+   ],
+   "source": "/baza/hosting/testy-vps/",
+   "ref": "316260707a0db8ccd83d7f5ac9d643f21396b44c",
+   "needs_root": false,
+   "fetches_latest": true
+  }
+ ]
+}

@@ -1,0 +1,29 @@
+{
+  "id": "multitest",
+  "title": "multitest",
+  "author": "saveksme",
+  "repo": "saveksme/multitest",
+  "category": "Проверки",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Интерактивная диагностика и бенчмарк сервера: несколько популярных тестов в одном меню.",
+  "files": [
+    {
+      "path": "multitest.sh",
+      "sha256": "41ff5d5766426ecd37cf8523fbafa69dc386f81c83acbdde4565ea0ad3c8a6f4",
+      "size": 231359
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Открыть меню тестов",
+      "run": "bash multitest.sh"
+    }
+  ],
+  "source": "/baza/hosting/testy-vps/",
+  "ref": "e000e612bc6c2cf6671def0ea3d52cd721bb7caf",
+  "needs_root": false,
+  "fetches_latest": true
+}

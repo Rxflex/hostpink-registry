@@ -1,0 +1,29 @@
+{
+  "id": "traffic-guard",
+  "title": "Traffic Guard",
+  "author": "dotX12",
+  "repo": "dotX12/traffic-guard",
+  "category": "Защита и тюнинг",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Блокировщик сканеров и лишнего трафика со списками подсетей и управлением фаерволом.",
+  "files": [
+    {
+      "path": "install.sh",
+      "sha256": "cce491441289a5dffeb67a73c443265f8836ae42ae06b4beb93a8b033e426395",
+      "size": 7244
+    }
+  ],
+  "actions": [
+    {
+      "id": "install",
+      "title": "Установить Traffic Guard",
+      "run": "bash install.sh"
+    }
+  ],
+  "source": "/baza/skripty/reshala-zaschita/",
+  "ref": "0594f8241a37d20876ebafada6e80ca2fa597900",
+  "needs_root": true,
+  "fetches_latest": true
+}

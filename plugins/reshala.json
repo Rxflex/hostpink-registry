@@ -1,0 +1,34 @@
+{
+  "id": "reshala",
+  "title": "Решала",
+  "author": "DonMatteoVPN",
+  "repo": "DonMatteoVPN/Reshala-Remnawave-Bedolaga",
+  "category": "Защита и тюнинг",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Комбайн обслуживания ноды и панели: оценка сервера, UFW и fail2ban, BBR, eBPF-шейпер, hardening ядра. Ставит команду reshala с меню.",
+  "files": [
+    {
+      "path": "install.sh",
+      "sha256": "c5dacb524ac3549248cb6b636b56ea8a96375320b7acdcd360caa801d9ff9c41",
+      "size": 2825
+    }
+  ],
+  "actions": [
+    {
+      "id": "install",
+      "title": "Установить или обновить Решалу",
+      "run": "bash install.sh"
+    },
+    {
+      "id": "menu",
+      "title": "Открыть меню Решалы (после установки)",
+      "run": "reshala"
+    }
+  ],
+  "source": "/baza/skripty/reshala-zaschita/",
+  "ref": "079365e65abd50f752ecf0a16eb3a063142f42b5",
+  "needs_root": true,
+  "fetches_latest": true
+}

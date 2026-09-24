@@ -1,0 +1,29 @@
+{
+  "id": "node-diagnostic",
+  "title": "Диагностика ноды",
+  "author": "Case211",
+  "repo": "Case211/node-diagnostic",
+  "category": "Проверки",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Десятки проверок Linux- и VPN-ноды одной командой: сеть, скорость, доступность YouTube и популярных сервисов.",
+  "files": [
+    {
+      "path": "node-diagnostic.sh",
+      "sha256": "53b8b29eab7bbed1f96789d3dcd0897fecb978028ddec912e72daed7ac16c20e",
+      "size": 13601
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Запустить диагностику",
+      "run": "bash node-diagnostic.sh"
+    }
+  ],
+  "source": "/baza/skripty/chekery/",
+  "ref": "3d26c9704686a3919db67a29aaf3a2497f7ad4d4",
+  "needs_root": false,
+  "fetches_latest": true
+}

@@ -1,0 +1,30 @@
+{
+  "id": "ipregion",
+  "title": "ipregion",
+  "author": "vernette",
+  "repo": "vernette/ipregion",
+  "category": "Проверки",
+  "platforms": [
+    "linux",
+    "darwin"
+  ],
+  "description": "Спрашивает десятки GeoIP-баз, стримингов и CDN, из какой страны они видят IP сервера.",
+  "files": [
+    {
+      "path": "ipregion.sh",
+      "sha256": "f80281f79012def06cc6a7744eb78d1a4e9d9ba90b336ae01c304bea66920cd8",
+      "size": 50186
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Проверить страну IP",
+      "run": "bash ipregion.sh"
+    }
+  ],
+  "source": "/baza/skripty/chekery/",
+  "ref": "d6c230cc1fd5042931590730a5651ef87e985236",
+  "needs_root": false,
+  "fetches_latest": false
+}

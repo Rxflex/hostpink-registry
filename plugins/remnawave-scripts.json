@@ -1,0 +1,49 @@
+{
+  "id": "remnawave-scripts",
+  "title": "Remnawave Scripts (DigneZzZ)",
+  "author": "DigneZzZ",
+  "repo": "DigneZzZ/remnawave-scripts",
+  "category": "Установщики",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Установка и управление панелью Remnawave, нодой и selfsteal-заглушкой одним скриптом, с обновлениями и бэкапами.",
+  "files": [
+    {
+      "path": "remnawave.sh",
+      "sha256": "44ad65ffe28bc1c35e838774e832e730149ea7a3c9ded39dbf97f4267666e0fa",
+      "size": 646184
+    },
+    {
+      "path": "remnanode.sh",
+      "sha256": "bfba0067a1ef2a54e03c979c65d2af8e521e61e5a66585d696ad12490abfc480",
+      "size": 200189
+    },
+    {
+      "path": "selfsteal.sh",
+      "sha256": "2f82a4a73492d8cdb8014aa91c73560929b88a66c23c51af79bfb9a96cdb92b4",
+      "size": 224596
+    }
+  ],
+  "actions": [
+    {
+      "id": "panel",
+      "title": "Панель Remnawave: установка",
+      "run": "bash remnawave.sh @ install"
+    },
+    {
+      "id": "node",
+      "title": "Нода Remnawave: установка",
+      "run": "bash remnanode.sh @ install"
+    },
+    {
+      "id": "selfsteal",
+      "title": "Selfsteal-заглушка: установка",
+      "run": "bash selfsteal.sh @ install"
+    }
+  ],
+  "source": "/baza/skripty/ustanovschiki/",
+  "ref": "e18fae58f6f98727c682af023f2269fd434324a1",
+  "needs_root": true,
+  "fetches_latest": true
+}

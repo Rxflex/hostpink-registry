@@ -1,0 +1,29 @@
+{
+  "id": "remnawave-backup-restore",
+  "title": "Бэкап и восстановление Remnawave",
+  "author": "distillium",
+  "repo": "distillium/remnawave-backup-restore",
+  "category": "Бэкапы",
+  "platforms": [
+    "linux"
+  ],
+  "description": "Резервное копирование каталога и базы Remnawave с отправкой в Telegram и восстановление из бэкапа.",
+  "files": [
+    {
+      "path": "backup-restore.sh",
+      "sha256": "91470909131ef66f5e6a022069dd419eb1f2fc8437bc7ec5655ba2df50e5f8ca",
+      "size": 150762
+    }
+  ],
+  "actions": [
+    {
+      "id": "run",
+      "title": "Открыть меню бэкапов",
+      "run": "bash backup-restore.sh"
+    }
+  ],
+  "source": "/baza/set/bekapy/",
+  "ref": "02323bd7554dfa9f4cb605a11c6a9b625ec11d85",
+  "needs_root": true,
+  "fetches_latest": true
+}
